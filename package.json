@@ -1,9 +1,10 @@
 {
   "name": "quasar-playground",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Quasar Project",
   "productName": "Quasar App",
   "author": "Hendrik Neumann <henne@armselig.net>",
+  "repository": "github:armselig/quasar-playground",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
@@ -12,12 +13,14 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "release": "standard-version"
+    "release": "standard-version",
+    "deploy": "vercel"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "pinia": "^2.0.11",
     "quasar": "^2.6.0",
+    "vercel": "^32.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
