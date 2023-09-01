@@ -14,7 +14,8 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "release": "standard-version",
-    "deploy": "vercel"
+    "deploy": "vercel",
+    "commit": "cz"
   },
   "dependencies": {
     "@quasar/extras": "^1.16.4",
@@ -31,6 +32,7 @@
     "@typescript-eslint/parser": "^5.10.0",
     "autoprefixer": "^10.4.2",
     "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^9.0.0",
@@ -43,5 +45,10 @@
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
