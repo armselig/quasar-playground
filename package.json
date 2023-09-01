@@ -1,39 +1,58 @@
 {
   "name": "quasar-playground",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Quasar Project",
   "productName": "Quasar App",
-  "author": "Hendrik Neumann <hendrik.neumann@digitaspixelpark.com>",
+  "author": "Hendrik Neumann <henne@armselig.net>",
+  "repository": "github:armselig/quasar-playground",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
+    "lint:fix": "eslint --ext .js,.ts,.vue ./ --fix",
     "format": "prettier --write \"**/*.{js,ts,vue,css,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "quasar build",
+    "release": "standard-version",
+    "deploy": "vercel",
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "pinia": "^2.0.11",
     "@quasar/extras": "^1.16.4",
+    "pinia": "^2.0.11",
     "quasar": "^2.6.0",
+    "vercel": "^32.1.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@quasar/app-vite": "^1.3.0",
+    "@types/node": "^12.20.21",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "eslint": "^8.10.0",
-    "eslint-plugin-vue": "^9.0.0",
-    "eslint-config-prettier": "^8.1.0",
-    "prettier": "^2.5.1",
-    "@types/node": "^12.20.21",
-    "@quasar/app-vite": "^1.3.0",
     "autoprefixer": "^10.4.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.5.1",
+    "standard-version": "^9.5.0",
     "typescript": "^4.5.4"
   },
   "engines": {
     "node": "^18 || ^16 || ^14.19",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
+  },
+  "engineStrict": true,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
