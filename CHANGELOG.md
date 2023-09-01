@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/armselig/quasar-playground/compare/v0.1.0...v0.1.1) (2023-09-01)
+
+
+### Features
+
+* **@vue/devtools:** add package ([2da7882](https://github.com/armselig/quasar-playground/commit/2da78829f556c916812748b921af03d9e286913b))
+* **husky:** add `lint-staged` to `pre-commit` hook ([26897bb](https://github.com/armselig/quasar-playground/commit/26897bb51617dc556ba3d449b1318f0bd7296c75))
+* **the-footer:** add component ([6133e34](https://github.com/armselig/quasar-playground/commit/6133e346d92378d77e9b1a6ad555b08f08004686))
+* **the-header:** add component ([bc137d5](https://github.com/armselig/quasar-playground/commit/bc137d586a86f1fd3008222b086c386988d419e9))
+
 ## 0.1.0 (2023-09-01)
 
 
