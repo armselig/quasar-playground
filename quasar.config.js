@@ -9,6 +9,7 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
 const { configure } = require("quasar/wrappers");
+const path = require("path");
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -37,13 +38,13 @@ module.exports = configure(function (/* ctx */) {
       // 'ionicons-v4',
       // 'mdi-v5',
       // 'fontawesome-v6',
-      // 'eva-icons',
+      "eva-icons",
       // 'themify',
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
 
-      "roboto-font", // optional, you are not bound to it
-      "material-icons", // optional, you are not bound to it
+      // "roboto-font", // optional, you are not bound to it
+      // "material-icons", // optional, you are not bound to it
     ],
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
@@ -55,8 +56,11 @@ module.exports = configure(function (/* ctx */) {
 
       vueRouterMode: "hash", // available values: 'hash', 'history'
       // vueRouterBase,
-      // vueDevtools,
-      // vueOptionsAPI: false,
+      vueDevtools: true,
+      vueOptionsAPI: false,
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
@@ -87,7 +91,7 @@ module.exports = configure(function (/* ctx */) {
     framework: {
       config: {},
 
-      // iconSet: 'material-icons', // Quasar icon set
+      iconSet: "eva-icons", // Quasar icon set
       // lang: 'en-US', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact
